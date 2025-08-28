@@ -1,6 +1,6 @@
 # Devcontainer node template
 
-> ℹ️ Using current LTS version `22.18.0`
+> ℹ️ Using the [official Node docker image](https://hub.docker.com/_/node) with current [LTS version `22.18.0`](https://nodejs.org/en/about/previous-releases#nodejs-releases)
 Minimal template repo containing only a `.devcontainer` that boots an **Alpine** image with **node** installed.
 `NODE_VERSION` is set in the Dockerfile as:
 
