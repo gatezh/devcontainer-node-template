@@ -68,3 +68,38 @@ Edit the Dockerfile `ARG NODE_VERSION=...` and rebuild the container.
 // Tailwind CSS IntelliSense - Tailwind CSS completions & linting
 "bradlc.vscode-tailwindcss"
 ```
+
+
+## Pin node version
+
+To make sure greater compatibility across dev environment there are `.nvmrc`, `.npmrc`, `.node-version` config files available.
+Furthermore, you may want to update your `package.json` file to be compatible with `volta` and use a specific version of npm.
+
+
+```json
+{
+  "name": "your-project",
+  "version": "0.0.0",
+  "private": true,
+
+  /* tell Corepack/other tools the desired package manager version */
+  "packageManager": "npm@10.9.3",
+
+  /* Optional, for Volta users (very strong cross-platform pinning) */
+  "volta": {
+    "node": "22.18.0",
+    "npm": "10.9.3"
+  },
+
+  /* enforce engines (works with engine-strict in .npmrc) */
+  "engines": {
+    "node": "22.18.0",
+    "npm": "10.9.3"
+  },
+
+  "scripts": {
+    /* runs before install to ensure the developer is using the exact npm expected */
+    "preinstall": "node ./scripts/check-npm.js"
+  }
+}
+```
