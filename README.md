@@ -95,11 +95,6 @@ Furthermore, you may want to update your `package.json` file to be compatible wi
   "engines": {
     "node": "22.18.0",
     "npm": "10.9.3"
-  },
-
-  "scripts": {
-    /* runs before install to ensure the developer is using the exact npm expected */
-    "preinstall": "node ./scripts/check-npm.js"
   }
 }
 ```
