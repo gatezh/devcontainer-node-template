@@ -1,31 +1,37 @@
-# Devcontainer bun template
+# Devcontainer node template
 
-Minimal template repo containing only a `.devcontainer` that boots an **Alpine** image with **bun** installed.
-`BUN_VERSION` is set in the Dockerfile as:
+> ℹ️ Using current LTS version `22.18.0`
+Minimal template repo containing only a `.devcontainer` that boots an **Alpine** image with **node** installed.
+`NODE_VERSION` is set in the Dockerfile as:
 
 ```
-ARG BUN_VERSION=1.2.20
+ARG NODE_VERSION=22.18.0
 ```
 
 
 
 ## Purpose
 
-Starter container for creating "what used to be Node" apps (React, Vite, Next, etc.) — safe, fast, minimal, bun-first.
+Starter container for creating Node apps (React, Vite, Next, etc.) — safe, fast, minimal.
 
 
 
 ## Quick start
 
 1. Clone this repo.
+  > The most convenient way is to use `gh`: 
+  > ```
+  > gh repo create my-node-project --template gatezh/devcontainer-node-template --private --clone
+  > ```
+  > This will create a private GitHub repository name `my-node-project` and clone it to your local machine
 2. Open in VS Code and choose **Reopen in Container** (or use *Remote - Containers*).
-3. The container installs bun (version defined by `ARG BUN_VERSION`) and the listed extensions.
+3. The container installs node (version defined by `ARG NODE_VERSION`) and the listed extensions.
 
 
 
-## Change bun version
+## Change node version
 
-Edit the Dockerfile `ARG BUN_VERSION=...` and rebuild the container.
+Edit the Dockerfile `ARG NODE_VERSION=...` and rebuild the container.
 
 
 
@@ -45,8 +51,6 @@ Edit the Dockerfile `ARG BUN_VERSION=...` and rebuild the container.
 "bierner.markdown-preview-github-styles",
 
 // **JS**
-// Bun VS Code - bun tooling (run, dev, inspector)
-"oven.bun-vscode",
 // ESLint - JavaScript linting
 "dbaeumer.vscode-eslint",
 // NPM Intellisense - NPM package intellisense

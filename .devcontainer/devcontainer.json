@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/marcosgomesneto/bun-devcontainers/tree/main/src/basic-bun
 {
-  "name": "bun-app",
+  "name": "node-app",
   "dockerFile": "Dockerfile",
 
   // Keep node_modules out of a host machine
@@ -26,8 +26,6 @@
         "bierner.markdown-preview-github-styles",
 
         // **JS**
-        // Bun VS Code
-        "oven.bun-vscode",
         // ESLint - JavaScript linting
         "dbaeumer.vscode-eslint",
         // NPM Intellisense - NPM package intellisense
